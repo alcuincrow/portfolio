@@ -21,7 +21,8 @@ html {
     font-weight: 400;
     font-style: italic;
   }
-  
+
+
 
 
 /* Colors */
@@ -37,61 +38,47 @@ html {
     --black: #00000000; /* Good for background */
 }
 
-/* grid */
+/* main styles */
 
-.container {
+.hero {
     display: grid;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-template-rows: 1fr repeat(4, 3fr);
-    grid-gap: 1em;
-    
-}
-header {
-    display: grid;
-    grid-area: 1 / 1 / 1 / 1;
-    background-color: var(--greyBlack);
-    color: var(--ash);
-    text-align: center;
+    padding: 4em 2rem;
+    align-items: center;
+    background-color: var(--darkerGrey);
 }
 
-header ul {
+/* .hero img {
+    border-radius: 9em;
+    height: 250px;
+    width: 250px;
+} */
+
+.infoCard {
+    display: grid;
+    padding: 2em;
+   
+}
+
+.infoCard ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    
+}
+
+.infoCard ul li {
+    border-radius: .5rem;
     list-style: none;
-    display: inline-flex;
     
 }
 
-
-
-#left-sidebar {
-    display: grid;
-    grid-area: 1 / 1 / 5 / 1;
-    width: 50%;
-    height: 100vh;
-    background-color: var(--lightBlue);
-    color: var(--white);
-    z-index: -1;
-}
-
-#projects {
-    display: grid;
-    grid-area: 2 / 1 / 3 / 1;
-}
-
-.right-area {
-    display: grid;
-    grid-area: 2 / 2 / 5 / 3;
-    background-color: var(--steelBlue);
-    color: var(--ash);
-}
 
 footer {
     display: grid;
-    grid-area: 4 / 1 / 4 / 2;
     margin-top: auto;
     background-color: var(--darkerGrey);
     color: var(--ash);
+    text-align: center;
     
 }
