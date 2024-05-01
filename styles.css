@@ -1,6 +1,20 @@
 /* Universal styles */
-html {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
     scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: normal;
+  
 }
 
 /* Fonts */
@@ -48,12 +62,6 @@ html {
     background-color: var(--darkerGrey);
 }
 
-/* .hero img {
-    border-radius: 9em;
-    height: 250px;
-    width: 250px;
-} */
-
 .infoCard {
     display: grid;
     padding: 2em;
@@ -71,6 +79,69 @@ html {
     border-radius: .5rem;
     list-style: none;
     
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.contactCard {
+    display: flexbox;
+    justify-content: center;
+    height: auto;
+    width: 25%;
+    border-radius: 1.5%;
+    text-align: center;
+    position: relative;
+    
+    
+
+}
+
+.contactCard h2 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -15%;
+}
+
+.profileBio p {
+    text-align: center;
+    padding: 2%;
+
+}
+
+.contactCard img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: #fff 10px solid;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.socialLinks {
+    padding: 20px;
+    text-align: center;
+}
+
+.socialLinks a {
+    padding: 0% 5%;
+    font-size: 2rem;
+
+}
+
+.socialLinks a:hover {
+    transform: scale(1.5);
 }
 
 
