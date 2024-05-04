@@ -181,6 +181,47 @@ body {
     transform: scale(1.5);
 }
 
+#intro {
+    text-align: center;
+    padding: 3em;
+}
+
+.projects-grid {
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+}
+
+.projects-grid li {
+    list-style: none;
+}
+
+
+.project-item {
+    text-align: center;
+    margin-left: 3em;
+    border: 1px solid black;
+    padding: .5em .4em;
+    background-color: var(--ash);
+}
+
+.project-item img {
+    width: 100%;
+}
+
+button {
+    width: 7em;
+    height: 3em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--lightBlue);
+}
+
+
+
 
 footer {
     display: grid;
