@@ -10,7 +10,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    </head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "h-XgD439_XlYWHMD1",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
     <body>
       <main>
         <section class="hero">
@@ -30,16 +53,38 @@
                 </figure>
                 <section>
                     <h2 class="profileName">Casalcuin Crow</h2>
-                    <p class="profileBio">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                         Quae natus sed dolor nihil quam voluptas suscipit sequi, iusto quia
-                          quidem voluptates necessitatibus magnam et saepe tenetur earum sunt fugit impedit?</p>
+                    <p class="profileBio">If you would like to contact me you may use the form below. You may also check out my social sites for more information.</p>
+                          <br>
+                          <nav aria-label="social links">
+                            <a href="https://github.com/alcuincrow" target="_blank"><box-icon name='github' type='logo'
+                                color='#2D3133'></box-icon></a>
+                            <a href="https://www.linkedin.com/in/casalcuin-crow/" target="_blank"><box-icon
+                                name='linkedin-square' type='logo' color='#2D3133'></box-icon></a>
+                            </nav>
                 </section>
-                <nav aria-label="social links">
-                    <a href="https://github.com/alcuincrow" target="_blank"><box-icon name='github' type='logo'
-                        color='#2D3133'></box-icon></a>
-                    <a href="https://www.linkedin.com/in/casalcuin-crow/" target="_blank"><box-icon
-                        name='linkedin-square' type='logo' color='#2D3133'></box-icon></a>
-                    </nav>
+                <br>
+                <section>
+                    <form id="contact-from">
+                        <h3>Contact me</h3>
+                        <br>
+                        <input type="hidden" name="contact_number" value="697483">
+                        <label for="name">Name</label>
+                        <input id="name" aria-label="name" placeholder="name" type="text" required>
+                        <br>
+                        <label for="email">Email</label>
+                        <input id="email" aria-label="email" placeholder="Email" type="email" required>
+                        <br>
+                        <label for="message">Message</label>
+                        <br>
+                        <textarea id="message" name="message" rows="5" cols="30" required>
+                        </textarea>
+                        <br>
+                        <br>
+                        <input type="submit" value="Send">
+                        <input type="reset" value="Reset">
+                    </form>
+                </section>
+               
             </article>
         </div>
         
