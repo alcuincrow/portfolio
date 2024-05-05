@@ -76,7 +76,7 @@ body {
 
 .navBar ul li {
     display: inline-block;
-    padding: 0% .5%;
+    padding: 1% .5%;
 }
 
 .navBar a {
@@ -88,23 +88,36 @@ body {
     color: var(--lightBlue);
 }
 
+#summary {
+    display: grid;
+    padding: 1em 0.5rem;
+}
+
+#summary h2, p {
+    text-align: center;
+    
+}
+
 .infoCard {
     display: grid;
     padding: 2em;
+    justify-content: center;
+    text-align: center;
+    
    
 }
 
 .infoCard ul {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
     
 }
 
 .infoCard ul li {
-    border-radius: .5rem;
+    display: inline-block;
     list-style: none;
-    padding: 1% 0%;
+    margin: .5rem;
+
     
 }
 
@@ -200,20 +213,25 @@ body {
 
 .project-item {
     text-align: center;
-    margin-left: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
     border: 1px solid black;
     padding: .5em .4em;
     background-color: var(--ash);
+    height: fit-contentß;
+    width: fit-content;
 }
 
 .project-item img {
     width: 100%;
+    border: 1px solid rgb(78, 74, 74);
 }
 
 button {
     width: 7em;
     height: 3em;
     font-weight: bold;
+    margin-top: 1em;
 }
 
 button:hover {
@@ -230,5 +248,4 @@ footer {
     color: var(--ash);
     text-align: center;
     font-size: 18px;
-    
 }
