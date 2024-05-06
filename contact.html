@@ -17,21 +17,21 @@
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "h-XgD439_XlYWHMD1",
+              publicKey: "BXhwHvLYYzIJFKqeb",
             });
         })();
     </script>
     <script type="text/javascript">
         window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+            document.getElementById('contact-from').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_9tbsfob', 'template_hmjm3e9', this)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
                         console.log('FAILED...', error);
-                    });
+                    })
             });
         }
     </script>
@@ -77,10 +77,10 @@
                         <br>
                         <input type="hidden" name="contact_number" value="697483">
                         <label for="name">Name</label>
-                        <input id="name" aria-label="name" placeholder="name" type="text" required>
+                        <input id="name" aria-label="name" type="text" name="user_name" required>
                         <br>
                         <label for="email">Email</label>
-                        <input id="email" aria-label="email" placeholder="Email" type="email" required>
+                        <input id="email" aria-label="email" type="email" name="user_email" required>
                         <br>
                         <label for="message">Message</label>
                         <br>

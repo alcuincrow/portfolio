@@ -148,23 +148,26 @@ body {
 }
 
 .flexContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto, minmax(320px, 1fr));
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     margin-top: 3em;
+    min-width: 50%;
 }
 
 
 .contactCard {
-    display: flexbox;
+    display: grid;
     justify-content: center;
     height: auto;
     width: 25%;
     border-radius: 1.5%;
     text-align: center;
     position: relative;
+    margin: auto;
     
     
 
