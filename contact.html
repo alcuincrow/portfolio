@@ -29,8 +29,10 @@
                 emailjs.sendForm('service_9tbsfob', 'template_hmjm3e9', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        window.alert("Message Sent!");
                     }, (error) => {
                         console.log('FAILED...', error);
+                        window.alert("There was an error.");
                     })
             });
         }
@@ -88,8 +90,8 @@
                         </textarea>
                         <br>
                         <br>
-                        <input type="submit" value="Send">
-                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
                     </form>
                 </section>
             </article>

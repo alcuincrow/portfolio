@@ -5,5 +5,5 @@ darkLight.addEventListener('click', function themeToggle() {
     element.classList.toggle("dark-mode")
 }
 
-)
+);
 
